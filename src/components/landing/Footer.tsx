@@ -36,7 +36,7 @@ const Footer = () => {
                 <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-primary text-primary-foreground">
                   <Bot className="h-5 w-5" />
                 </div>
-                <span className="text-xl font-bold">RecruitAI</span>
+                <span className="text-xl font-bold">HireFlow</span>
               </div>
               <p className="mb-6 text-muted-foreground max-w-md">
                 AI-powered LinkedIn sales automation platform designed specifically for recruitment agencies.
@@ -96,7 +96,7 @@ const Footer = () => {
 
         <div className="py-6 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
           <p className="text-sm text-muted-foreground">
-            © 2024 RecruitAI. All rights reserved.
+            © 2024 HireFlow. All rights reserved.
           </p>
           <div className="flex gap-6">
             {footerLinks.legal.map((link) => (

@@ -33,21 +33,6 @@ const HeroSection = () => {
               </Button>
             </div>
           </div>
-          <div className="mt-16 animate-scale-in">
-            <div className="relative mx-auto max-w-4xl">
-              <div className="rounded-xl bg-card p-4 shadow-large">
-                <div className="aspect-video rounded-lg bg-muted flex items-center justify-center">
-                  <div className="text-center">
-                    <div className="h-16 w-16 mx-auto mb-4 rounded-full bg-primary/10 flex items-center justify-center">
-                      <Play className="h-8 w-8 text-primary" />
-                    </div>
-                    <p className="text-muted-foreground">Platform Demo Video</p>
-                  </div>
-                </div>
-              </div>
-              <div className="absolute -inset-4 bg-hero-gradient opacity-20 blur-2xl -z-10 rounded-xl"></div>
-            </div>
-          </div>
         </div>
       </div>
     </section>
