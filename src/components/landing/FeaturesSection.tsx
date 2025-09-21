@@ -42,40 +42,43 @@ const FeaturesSection = () => {
   ];
 
   return (
-    <section className="section-padding bg-background">
+    <section className="section-padding bg-muted/20">
       <div className="container-custom">
-        <div className="mx-auto max-w-3xl text-center mb-16">
-          <h2 className="mb-4 text-3xl font-bold tracking-tight sm:text-4xl">
+        <div className="mx-auto max-w-4xl text-center mb-20">
+          <h2 className="mb-6 text-4xl font-bold tracking-tight sm:text-5xl bg-text-gradient bg-clip-text text-transparent">
             Everything You Need to Scale Sales
           </h2>
-          <p className="text-lg text-muted-foreground">
+          <p className="text-xl text-muted-foreground leading-relaxed">
             Comprehensive AI-powered tools that transform how recruitment agencies handle LinkedIn outreach.
           </p>
         </div>
-        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+        <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3 max-w-7xl mx-auto">
           {features.map((feature, index) => {
             const IconComponent = feature.icon;
             return (
               <Card 
                 key={index}
-                className="group hover-lift animate-fade-in border-0 shadow-soft hover:shadow-medium"
+                className="group relative overflow-hidden hover-lift animate-fade-in bg-card/50 backdrop-blur-sm border border-border/50 hover:border-primary/20 transition-all duration-300"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
-                <CardHeader>
-                  <div className="mb-2 inline-flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10 text-primary group-hover:bg-primary/20 transition-colors">
-                    <IconComponent className="h-6 w-6" />
+                <div className="absolute inset-0 bg-hero-gradient opacity-0 group-hover:opacity-5 transition-opacity duration-300" />
+                <CardHeader className="pb-4">
+                  <div className="mb-4 inline-flex h-14 w-14 items-center justify-center rounded-xl bg-primary/10 text-primary group-hover:bg-primary/15 group-hover:scale-110 transition-all duration-300 shadow-sm">
+                    <IconComponent className="h-7 w-7" />
                   </div>
-                  <CardTitle className="text-xl">{feature.title}</CardTitle>
-                  <CardDescription className="text-muted-foreground">
+                  <CardTitle className="text-xl font-semibold mb-2 group-hover:text-primary transition-colors">
+                    {feature.title}
+                  </CardTitle>
+                  <CardDescription className="text-muted-foreground leading-relaxed">
                     {feature.description}
                   </CardDescription>
                 </CardHeader>
-                <CardContent>
-                  <ul className="space-y-2">
+                <CardContent className="pt-2">
+                  <ul className="space-y-3">
                     {feature.benefits.map((benefit, benefitIndex) => (
-                      <li key={benefitIndex} className="flex items-center text-sm text-muted-foreground">
-                        <div className="mr-2 h-1.5 w-1.5 rounded-full bg-accent"></div>
-                        {benefit}
+                      <li key={benefitIndex} className="flex items-start gap-3 text-sm text-muted-foreground">
+                        <div className="mt-1.5 h-1.5 w-1.5 rounded-full bg-primary flex-shrink-0 group-hover:bg-primary/80 transition-colors"></div>
+                        <span className="leading-relaxed">{benefit}</span>
                       </li>
                     ))}
                   </ul>
